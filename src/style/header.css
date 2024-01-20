@@ -1,0 +1,9 @@
+.Header .HeaderImage {
+    height: 100px;
+    /* width: 100px; */
+    display: inline;
+}
+
+.Header .HeaderTitle {
+    display: inline;
+}
