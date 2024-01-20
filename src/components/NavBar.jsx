@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function NavBar() {
   return (
     <div className="navbar">
+      <NavLink to="/">Home</NavLink>
       <NavLink to="/shotlist">Shot List</NavLink>
       <NavLink to="/profile">Profile</NavLink>
       <a href="https://outlook.office.com/mail/" target="_blank">
@@ -21,9 +22,7 @@ export default function NavBar() {
       >
         Daybook
       </a>
-      <a href="landing.html" className="right">
-        Log Out
-      </a>
+      <NavLink className="right" to="/login">Login</NavLink>
     </div>
   );
 }

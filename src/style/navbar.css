@@ -22,7 +22,7 @@
   }
   
   /* Right-aligned link */
-  .navbar a.right {
+  .navbar NavLink.right {
     float: right;
     color: white;
     background-color: red;
