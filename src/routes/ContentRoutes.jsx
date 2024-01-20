@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Profile from "../components/contentProfile/Profile";
 import ShotList from "../components/contentShotList/ShotList";
+import LoginForm from "../components/LoginForm";
 
 export default function ContentRoutes(props) {
   return (
@@ -9,7 +10,7 @@ export default function ContentRoutes(props) {
             
         </Route>
       {/* <Route index element={<Homepage {...props} />} /> */}
-      {/* <Route path="login" element={<LoginForm {...props}/>}/> */}
+      <Route path="login" element={<LoginForm {...props}/>}/>
       {/* <Route
         path="dash"
         element={
