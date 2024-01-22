@@ -9,7 +9,7 @@ function LoginForm() {
   const [submitResult, setSubmitResult] = useState('')
 
   const {currentUser, handleUpdateUser} = useUserContext()
-  const {theme, dakMode} = useContext(MyThemeContext)
+  const {theme, darkMode} = useContext(MyThemeContext)
 
   const navigate = useNavigate()
 
