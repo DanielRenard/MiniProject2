@@ -2,11 +2,12 @@ import { Route, Routes } from "react-router-dom";
 import Profile from "../components/contentProfile/Profile";
 import ShotList from "../components/contentShotList/ShotList";
 import LoginForm from "../components/LoginForm";
+import "../style/homePage.css"
 
 export default function ContentRoutes(props) {
   return (
     <Routes>
-        <Route index element={<div>Homepage Baby!</div>}>
+        <Route index element={<div><img className="homeImage" src="/src/images/image-asset.jpeg" alt="floor directing image"></img></div>}>
             
         </Route>
       {/* <Route index element={<Homepage {...props} />} /> */}

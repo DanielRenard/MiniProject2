@@ -5,7 +5,7 @@ export default function ShotListItem(props) {
       {props.item.name},
       {props.item.setPiece},
       {props.item.show},
-      {props.item.image}
+      <img src={props.item.image}/>
     </div>
   );
 }
