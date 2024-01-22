@@ -1,4 +1,5 @@
 export default function ShotListItem(props) {
+
   return (
     <div className="ShotListItem">
       {props.item.id},

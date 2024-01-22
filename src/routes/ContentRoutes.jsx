@@ -7,7 +7,7 @@ import "../style/homePage.css"
 export default function ContentRoutes(props) {
   return (
     <Routes>
-        <Route index element={<div><img className="homeImage" src="/src/images/image-asset.jpeg" alt="floor directing image"></img></div>}>
+        <Route index element={<div><img className="homeImage" src="/images/image-asset.jpeg" alt="floor directing image"></img></div>}>
             
         </Route>
       {/* <Route index element={<Homepage {...props} />} /> */}

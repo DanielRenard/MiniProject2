@@ -10,30 +10,40 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { DataGrid } from "@mui/x-data-grid";
 
 export default function ShotList() {
-//   const columns = [
-//     { field: "id", headerName: "ID", width: 70 },
-//     { field: "name", headerName: "Name", width: 130 },
-//     { field: "setPiece", headerName: "Set Piece", width: 130 },
-//     {
-//       field: "image",
-//       headerName: "Set Piece",
-//       width: 90,
-//     },
-//     {
-//       field: "selection",
-//       headerName: "Select",
-//       description: "This column has a value getter and is not sortable.",
-//       sortable: false,
-//       width: 160,
-//       valueGetter: (params) =>
-//         `${params.shotList.name || ""} ${params.shotList.id || ""}`,
-//     },
-//   ];
-
   const cameraList = CameraData?.map((camera) => {
-    const shotList = camera.shotList.map((shot, index) => {
-      return <ShotListItem key={index} item={shot} />;
-    });
+    // const shotList = camera.shotList.map((shot, index) => {
+    //   return <ShotListItem key={index} item={shot} />;
+    // });
+
+    const columns = [
+      { field: "id", headerName: "ID", width: 70 },
+      { field: "name", headerName: "Name", width: 200 },
+      { field: "setPiece", headerName: "Set Piece", width: 130 },
+      {
+        field: "image",
+        headerName: "Image",
+        width: 110,
+        renderCell: (params) => {
+            return (
+                <img className="tableImage" width="100px" src={params.value}/>
+            )
+        }
+        // valueGetter: (params) => {console.log(params)
+        // let imgTag = document.createElement('img')
+        // imgTag.src = params.value
+        // return imgTag
+        // }
+      },
+      {
+        field: "selection",
+        headerName: "Select",
+        description: "This column has a value getter and is not sortable.",
+        sortable: false,
+        width: 250,
+        valueGetter: (params) => {
+          return `${params.row.name || ""} ${params.row.id || ""}`},
+      },
+    ];
 
     return (
       <div key={camera.name}>
@@ -46,9 +56,9 @@ export default function ShotList() {
             {camera.name}
           </AccordionSummary>
           <AccordionDetails>
-            {/* <div style={{ height: 400, width: "100%" }}>
+            <div style={{ height: 400, width: "100%" }}>
               <DataGrid
-                rows={shotList}
+                rows={camera.shotList}
                 columns={columns}
                 initialState={{
                   pagination: {
@@ -58,8 +68,8 @@ export default function ShotList() {
                 pageSizeOptions={[5, 10]}
                 checkboxSelection
               />
-            </div> */}
-            {shotList}
+            </div>
+            {/* {shotList} */}
           </AccordionDetails>
         </Accordion>
       </div>
